@@ -3,7 +3,7 @@ provider "aws" {
   access_key  = "${var.aws_access_key}"
   secret_key  = "${var.aws_secret_key}"
   region      = "${var.region}"
-  version     = "~> 1.5"
+  version     = "~> 1.6"
 }
 
 provider "null" {
@@ -24,7 +24,7 @@ resource "aws_subnet" "sn_public" {
   vpc_id                  = "${aws_vpc.vpc_rad.id}"
   cidr_block              = "${var.public_subnet}"
   #Hardcode Availability Zone to avoid t2.micro from getting created in 2d
-  #availability_zone       = "us-west-2a"
+  availability_zone       = "us-west-2a"
   map_public_ip_on_launch = "true"
   tags                    = {    Name = "sn_rad_public"  }
 }

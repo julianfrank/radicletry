@@ -1,8 +1,11 @@
-variable "ec2_ami" {
+variable "ami_ec2" {
   default=       "ami-0385455dc2b1498ef"     
 }
-variable "nat_ami" {
+variable "ami_nat" {
   default=       "ami-0b840e8a1ce4cdf15"     
+}
+variable "ami_ubuntu1804" {
+  default=       "ami-005bdb005fb00e791"     
 }
 variable "aws_access_key" {
   default     = ""
@@ -28,6 +31,10 @@ variable "ssh_key_name" {
 variable "ssh_key_file_name" {
   default     = ".pem"
   description = "Amazon AWS Key Pair Name with the extension of the actual file name"
+}
+variable "ssh_key_path" {
+  description = "Path to the keyfile relative to the terraform repo"
+  default = ""
 }
 
 variable "cidr_ipv4" {
