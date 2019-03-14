@@ -1,0 +1,18 @@
+
+//Rename this ..template to .tfvars in your fork and fill the details as per your environment and design
+
+# Amazon AWS Access Key
+aws_access_key = ""
+# Amazon AWS Secret Key
+aws_secret_key = ""
+# Amazon AWS Key Pair Name
+ssh_key_name = ""
+ssh_key_file_name=""
+# Region where resources should be created
+region = "us-west-2"
+# AWS Instance Type
+type = "t2.micro"
+#IPV4 CIDR
+cidr_ipv4 = "10.1.0.0/16"
+public_subnet="10.1.0.0/24"
+private_subnet="10.1.1.0/24"
